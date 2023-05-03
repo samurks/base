@@ -6,21 +6,23 @@ class Produto{
     this.preco = preco;
 
     }
+
     mostrarProduto(){
     return this.nome +  this.datadeCadastro  + this.descricao + this.preco;
     }
 }
 
 class produtoDestaque extends Produto{
-constructor(nome, datadeCadastro, descricao, preco, imagemDestaque){
-    super(nome, datadeCadastro, descricao, preco){
-
-
+    constructor(nome, datadeCadastro, descricao, preco, imagemDestaque){
+        super(nome, datadeCadastro, descricao, preco)
         this.imagemDestaque = imagemDestaque;
     }
-}
-mostrarProdutoDestaque(){
-return this.nome +  this.datadeCadastro  + this.descricao + this.preco + this.img;
+
+    mostrarProdutoDestaque(){
+    return ` 
+    <p class="vermeio">${this.nome}<p>
+    <p>${this.datadeCadastro}<p>
+        `
 }
 }
 
@@ -29,4 +31,4 @@ return this.nome +  this.datadeCadastro  + this.descricao + this.preco + this.im
      console.log(produto.mostrarProduto())
      console.log(produtodestaque.mostrarProduto());
      
-    
+ produtoDestaque.insertAdjacentHTML('afterbegin', produto.mostrarProdutoDestaque());
