@@ -1,7 +1,23 @@
 body {
-  background: #CCC;
+  background: #02bacb66;
 }
 
-vermeio {
-  color: red;
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 500px; 
+}
+
+.titulo-centralizado {
+  text-align: center; 
+  background-color: rgb(255, 255, 255); 
+}
+
+.nm1 {
+  text-align: center;
+}
+
+.imgDestaque {
+  height:250px;
 }
